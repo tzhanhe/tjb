@@ -79,7 +79,6 @@ public class ForSaleProduct {
         this.INVALIDDATE = INVALIDDATE;
         this.ISCANTRADE = ISCANTRADE;
     }
-
     @Override
     public String toString() {
         return "ForSaleProduct{" +

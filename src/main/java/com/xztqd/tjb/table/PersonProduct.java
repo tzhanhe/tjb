@@ -79,7 +79,6 @@ public class PersonProduct {
         this.ENDDATE = ENDDATE;
         this.PROSTATE = PROSTATE;
     }
-
     @Override
     public String toString() {
         return "PersonProduct{" +
