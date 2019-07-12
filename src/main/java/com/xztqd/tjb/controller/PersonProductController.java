@@ -1,6 +1,7 @@
 package com.xztqd.tjb.controller;
 
 
+import com.alibaba.fastjson.JSON;
 import com.xztqd.tjb.po.PersonProduct;
 import com.xztqd.tjb.service.PersonProductService;
 import com.xztqd.tjb.service.impl.PersonProductServiceImpl;
@@ -66,5 +67,15 @@ public class PersonProductController {
         personProduct.setProstate(Integer.parseInt(prostate));
 
         return personProductService.personProductUpdate(personProduct);
+    }
+
+    @RequestMapping("/personProductSelectAll")
+    public Object personProductSelectAll(HttpServletRequest req, HttpServletResponse resp){
+        //接受
+        String np=req.getParameter("np");
+        String size=req.getParameter("size");
+        PersonProduct personProduct=new PersonProduct();
+        //处理
+        return JSON.toJSONString(personProductService.personProductSelectAll(Integer.parseInt(np),Integer.parseInt(size)));
     }
 }

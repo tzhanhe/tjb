@@ -23,6 +23,6 @@ public interface PersonProductMapper {
     @Select("select * from PersonProduct where title=#{title} and content =#{content} limit 1 ")
     public PersonProduct personProductSelectOne(PersonProduct personProduct);
     //4selectAll
-    @Select("select * from PersonProduct order by id desc limit #{np},#{size}")
+    @Select("select * from PersonProduct order by ppflwno desc limit #{np},#{size}")
     public List<PersonProduct> personProductSelectAll(@Param("np") int np,@Param("size") int size);
 }
