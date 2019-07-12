@@ -1,4 +1,4 @@
-package com.xztqd.tjb.bean;
+package com.xztqd.tjb.po;
 
 public class RecomProduct {
     private String prono;
@@ -7,7 +7,7 @@ public class RecomProduct {
     private String prorate;
     private long saleamt;
     private String invaliddate;
-    private String enddate;
+    private String expiredate;
     private String fsflwno;
 
     public String getProno() {
@@ -58,12 +58,12 @@ public class RecomProduct {
         this.invaliddate = invaliddate;
     }
 
-    public String getEnddate() {
-        return enddate;
+    public String getExpiredate() {
+        return expiredate;
     }
 
-    public void setEnddate(String enddate) {
-        this.enddate = enddate;
+    public void setExpiredate(String expiredate) {
+        this.expiredate = expiredate;
     }
 
     public String getFsflwno() {

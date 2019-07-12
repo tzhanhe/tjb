@@ -1,4 +1,4 @@
-package com.xztqd.tjb.bean;
+package com.xztqd.tjb.po;
 
 public class PersonProduct {
     private String ppflwno;

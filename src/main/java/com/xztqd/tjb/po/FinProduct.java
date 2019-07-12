@@ -1,4 +1,4 @@
-package com.xztqd.tjb.bean;
+package com.xztqd.tjb.po;
 
 import java.util.Date;
 
