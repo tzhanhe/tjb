@@ -11,16 +11,16 @@ import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
-@Repository("accountDao")
+@Repository("personProductDao")
 public class PersonProductDaoImpl implements PersonProductDao {
     private static final Logger _logger = LoggerFactory.getLogger(PersonProductDaoImpl.class) ;
 
     @Autowired
     private JdbcTemplate jdbcTemplate;
     @Override
-    public List<PersonProduct> select() {
+    public List<PersonProduct> select(String cstno) {
         RowMapper<PersonProduct> rowMapper = new BeanPropertyRowMapper<PersonProduct>(PersonProduct.class);
-        List<PersonProduct> personProduct =jdbcTemplate.query("select * from PersonProduct",rowMapper);
+        List<PersonProduct> personProduct =jdbcTemplate.query("select * from PersonProduct where CSTNO = ?",rowMapper,cstno);
         return personProduct;
     }
 }
