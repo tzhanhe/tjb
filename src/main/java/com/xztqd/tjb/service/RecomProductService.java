@@ -1,8 +1,8 @@
 package com.xztqd.tjb.service;
 
-import com.xztqd.tjb.po.RecomProduct;
+        import com.xztqd.tjb.po.RecomProduct;
 
-import java.util.List;
+        import java.util.List;
 
 public interface RecomProductService {
     public List<RecomProduct> queryRecom();

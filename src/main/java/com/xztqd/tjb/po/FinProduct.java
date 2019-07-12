@@ -1,129 +1,135 @@
 package com.xztqd.tjb.po;
 
+import com.alibaba.fastjson.annotation.JSONField;
+
 import java.util.Date;
 
 public class FinProduct {
     //产品表属性
-    private String PRONO;//产品号
-    private String PRONAME;//产品名称
-    private String PRODESC;//产品描述
-    private String PRORATE;//产品利率
-    private String PRRISK;//产品风险系数
-    private String FINDATE;//期限
-    private Long INITMONEY;//最低认购额度
-    private Date BEGINDAT;//开始售卖日期
-    private Date ENDDATE;//停止售卖日期
-    private Date EXPIREDATE;//到期日期
+    private String prono;//产品号
+    private String proname;//产品名称
+    private String prodesc;//产品描述
+    private String prorate;//产品利率
+    private String prrisk;//产品风险系数
+    private String findate;//期限
+    private long initmoney;//最低认购额度
+    @JSONField(format = "yyyy-MM-dd hh:mm:ss")
+    private Date begindat;//开始售卖日期
+    @JSONField(format = "yyyy-MM-dd hh:mm:ss")
+    private Date enddate;//停止售卖日期
+    @JSONField(format = "yyyy-MM-dd hh:mm:ss")
+    private Date expiredate;//到期日期
 
 
-    public String getPRONO() {
-        return PRONO;
+    public String getProno() {
+        return prono;
     }
 
-    public void setPRONO(String PRONO) {
-        this.PRONO = PRONO;
+    public void setProno(String prono) {
+        this.prono = prono;
     }
 
-    public String getPRONAME() {
-        return PRONAME;
+    public String getProname() {
+        return proname;
     }
 
-    public void setPRONAME(String PRONAME) {
-        this.PRONAME = PRONAME;
+    public void setProname(String proname) {
+        this.proname = proname;
     }
 
-    public String getPRODESC() {
-        return PRODESC;
+    public String getProdesc() {
+        return prodesc;
     }
 
-    public void setPRODESC(String PRODESC) {
-        this.PRODESC = PRODESC;
+    public void setProdesc(String prodesc) {
+        this.prodesc = prodesc;
     }
 
-    public String getPRORATE() {
-        return PRORATE;
+    public String getProrate() {
+        return prorate;
     }
 
-    public void setPRORATE(String PRORATE) {
-        this.PRORATE = PRORATE;
+    public void setProrate(String prorate) {
+        this.prorate = prorate;
     }
 
-    public String getPRRISK() {
-        return PRRISK;
+    public String getPrrisk() {
+        return prrisk;
     }
 
-    public void setPRRISK(String PRRISK) {
-        this.PRRISK = PRRISK;
+    public void setPrrisk(String prrisk) {
+        this.prrisk = prrisk;
     }
 
-    public String getFINDATE() {
-        return FINDATE;
+    public String getFindate() {
+        return findate;
     }
 
-    public void setFINDATE(String FINDATE) {
-        this.FINDATE = FINDATE;
+    public void setFindate(String findate) {
+        this.findate = findate;
     }
 
-    public Long getINITMONEY() {
-        return INITMONEY;
+    public long getInitmoney() {
+        return initmoney;
     }
 
-    public void setINITMONEY(Long INITMONEY) {
-        this.INITMONEY = INITMONEY;
+    public void setInitmoney(long initmoney) {
+        this.initmoney = initmoney;
     }
 
-    public Date getBEGINDAT() {
-        return BEGINDAT;
+    public Date getBegindat() {
+        return begindat;
     }
 
-    public void setBEGINDAT(Date BEGINDAT) {
-        this.BEGINDAT = BEGINDAT;
+    public void setBegindat(Date begindat) {
+        this.begindat = begindat;
     }
 
-    public Date getENDDATE() {
-        return ENDDATE;
+    public Date getEnddate() {
+        return enddate;
     }
 
-    public void setENDDATE(Date ENDDATE) {
-        this.ENDDATE = ENDDATE;
+    public void setEnddate(Date enddate) {
+        this.enddate = enddate;
     }
 
-    public Date getEXPIREDATE() {        return EXPIREDATE;
+    public Date getExpiredate() {
+        return expiredate;
     }
 
-    public void setEXPIREDATE(Date EXPIREDATE) {
-        this.EXPIREDATE = EXPIREDATE;
+    public void setExpiredate(Date expiredate) {
+        this.expiredate = expiredate;
     }
 
     public FinProduct() {
     }
 
-    public FinProduct(String PRONO, String PRONAME, String PRODESC, String PRORATE, String PRRISK, String FINDATE, Long INITMONEY, Date BEGINDAT, Date ENDDATE, Date EXPIREDATE) {
-        this.PRONO = PRONO;
-        this.PRONAME = PRONAME;
-        this.PRODESC = PRODESC;
-        this.PRORATE = PRORATE;
-        this.PRRISK = PRRISK;
-        this.FINDATE = FINDATE;
-        this.INITMONEY = INITMONEY;
-        this.BEGINDAT = BEGINDAT;
-        this.ENDDATE = ENDDATE;
-        this.EXPIREDATE = EXPIREDATE;
+    public FinProduct(String prono, String proname, String prodesc, String prorate, String prrisk, String findate, long initmoney, Date begindat, Date enddate, Date expiredate) {
+        this.prono = prono;
+        this.proname = proname;
+        this.prodesc = prodesc;
+        this.prorate = prorate;
+        this.prrisk = prrisk;
+        this.findate = findate;
+        this.initmoney = initmoney;
+        this.begindat = begindat;
+        this.enddate = enddate;
+        this.expiredate = expiredate;
     }
 
     @Override
     public String toString() {
         return "FinProduct{" +
-                "PRONO='" + PRONO + '\'' +
-                ", PRONAME='" + PRONAME + '\'' +
-                ", PRODESC='" + PRODESC + '\'' +
-                ", PRORATE='" + PRORATE + '\'' +
-                ", PRRISK='" + PRRISK + '\'' +
-                ", FINDATE='" + FINDATE + '\'' +
-                ", INITMONEY=" + INITMONEY +
-                ", BEGINDAT='" + BEGINDAT + '\'' +
-                ", ENDDATE='" + ENDDATE + '\'' +
-                ", EXPIREDATE='" + EXPIREDATE + '\'' +
+                "prono='" + prono + '\'' +
+                ", proname='" + proname + '\'' +
+                ", prodesc='" + prodesc + '\'' +
+                ", prorate='" + prorate + '\'' +
+                ", prrisk='" + prrisk + '\'' +
+                ", findate='" + findate + '\'' +
+                ", initmoney=" + initmoney +
+                ", begindat=" + begindat +
+                ", enddate=" + enddate +
+                ", expiredate=" + expiredate +
                 '}';
     }
 }

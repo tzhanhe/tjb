@@ -1,96 +1,99 @@
 package com.xztqd.tjb.po;
 
+import com.alibaba.fastjson.annotation.JSONField;
+
 import java.util.Date;
 
 public class ForSaleProduct {
-    private String FSFLWNO;//待售产品订单号
-    private String PPFLWNO;//个人订单号
-    private String CSTNO;//客户号
-    private String PRONO;//产品号
-    private Long SALEAMT;//出售金额
-    private Date INVALIDDATE;//失效日期
-    private Boolean ISCANTRADE;//是否可以交易（1 true 0 false）
+    private String fsflwno;//待售产品订单号
+    private String ppflwno;//个人订单号
+    private String cstno;//客户号
+    private String prono;//产品号
+    private long saleamt;//出售金额
+    @JSONField(format = "yyyy-MM-dd hh:mm:ss")
+    private Date invaliddate;//失效日期
+    private Boolean iscantrade;//是否可以交易（1 true 0 false）
 
 
-    public String getFSFLWNO() {
-        return FSFLWNO;
+    public String getFsflwno() {
+        return fsflwno;
     }
 
-    public void setFSFLWNO(String FSFLWNO) {
-        this.FSFLWNO = FSFLWNO;
+    public void setFsflwno(String fsflwno) {
+        this.fsflwno = fsflwno;
     }
 
-    public String getPPFLWNO() {
-        return PPFLWNO;
+    public String getPpflwno() {
+        return ppflwno;
     }
 
-    public void setPPFLWNO(String PPFLWNO) {
-        this.PPFLWNO = PPFLWNO;
+    public void setPpflwno(String ppflwno) {
+        this.ppflwno = ppflwno;
     }
 
-    public String getCSTNO() {
-        return CSTNO;
+    public String getCstno() {
+        return cstno;
     }
 
-    public void setCSTNO(String CSTNO) {
-        this.CSTNO = CSTNO;
+    public void setCstno(String cstno) {
+        this.cstno = cstno;
     }
 
-    public String getPRONO() {
-        return PRONO;
+    public String getProno() {
+        return prono;
     }
 
-    public void setPRONO(String PRONO) {
-        this.PRONO = PRONO;
+    public void setProno(String prono) {
+        this.prono = prono;
     }
 
-    public Long getSALEAMT() {
-        return SALEAMT;
+    public long getSaleamt() {
+        return saleamt;
     }
 
-    public void setSALEAMT(Long SALEAMT) {
-        this.SALEAMT = SALEAMT;
+    public void setSaleamt(long saleamt) {
+        this.saleamt = saleamt;
     }
 
-    public Date getINVALIDDATE() {
-        return INVALIDDATE;
+    public Date getInvaliddate() {
+        return invaliddate;
     }
 
-    public void setINVALIDDATE(Date INVALIDDATE) {
-        this.INVALIDDATE = INVALIDDATE;
+    public void setInvaliddate(Date invaliddate) {
+        this.invaliddate = invaliddate;
     }
 
-    public Boolean getISCANTRADE() {
-        return ISCANTRADE;
+    public Boolean getIscantrade() {
+        return iscantrade;
     }
 
-    public void setISCANTRADE(Boolean ISCANTRADE) {
-        this.ISCANTRADE = ISCANTRADE;
+    public void setIscantrade(Boolean iscantrade) {
+        this.iscantrade = iscantrade;
     }
 
     public ForSaleProduct() {
     }
 
-    public ForSaleProduct(String FSFLWNO, String PPFLWNO, String CSTNO, String PRONO, Long SALEAMT, Date INVALIDDATE, Boolean ISCANTRADE) {
-        this.FSFLWNO = FSFLWNO;
-        this.PPFLWNO = PPFLWNO;
-        this.CSTNO = CSTNO;
-        this.PRONO = PRONO;
-        this.SALEAMT = SALEAMT;
-        this.INVALIDDATE = INVALIDDATE;
-        this.ISCANTRADE = ISCANTRADE;
+    public ForSaleProduct(String fsflwno, String ppflwno, String cstno, String prono, Long saleamt, Date invaliddate, Boolean iscantrade) {
+        this.fsflwno = fsflwno;
+        this.ppflwno = ppflwno;
+        this.cstno = cstno;
+        this.prono = prono;
+        this.saleamt = saleamt;
+        this.invaliddate = invaliddate;
+        this.iscantrade = iscantrade;
     }
 
     @Override
     public String toString() {
         return "ForSaleProduct{" +
-                "FSFLWNO='" + FSFLWNO + '\'' +
-                ", PPFLWNO='" + PPFLWNO + '\'' +
-                ", CSTNO='" + CSTNO + '\'' +
-                ", PRONO='" + PRONO + '\'' +
-                ", SALEAMT=" + SALEAMT +
-                ", INVALIDDATE=" + INVALIDDATE +
-                ", ISCANTRADE=" + ISCANTRADE +
+                "fsflwno='" + fsflwno + '\'' +
+                ", ppflwno='" + ppflwno + '\'' +
+                ", cstno='" + cstno + '\'' +
+                ", prono='" + prono + '\'' +
+                ", saleamt=" + saleamt +
+                ", invaliddate=" + invaliddate +
+                ", iscantrade=" + iscantrade +
                 '}';
     }
 }

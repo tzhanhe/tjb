@@ -12,10 +12,30 @@ import java.util.List;
 @Service
 public class PersonProductServiceImpl implements PersonProductService {
     @Autowired
-    PersonProductMapper personProductMapper;
+    private  PersonProductMapper personProductMapper;
 
     @Override
-    public List<PersonProduct> queryPersonProduct(String cstno) {
-        return personProductMapper.queryPersonProduct(cstno);
+    public int personProductInsert(PersonProduct personProduct) {
+        return personProductMapper.personProductInsert(personProduct);
+    }
+
+    @Override
+    public int personProductDelete(String ppflwno) {
+        return personProductMapper.personProductDelete(ppflwno);
+    }
+
+    @Override
+    public int personProductUpdate(PersonProduct personProduct) {
+        return personProductMapper.personProductUpdate(personProduct);
+    }
+
+    @Override
+    public PersonProduct personProductSelectOne(PersonProduct personProduct) {
+        return personProductMapper.personProductSelectOne(personProduct);
+    }
+
+    @Override
+    public List<PersonProduct> personProductSelectAll(int np, int size) {
+        return personProductMapper.personProductSelectAll((np-1)*size,size);
     }
 }
