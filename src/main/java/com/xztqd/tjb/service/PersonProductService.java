@@ -12,7 +12,7 @@ public class PersonProductService {
     @Autowired
     PersonProductDaoImpl accountDaoImpl;
 
-    public List<PersonProduct> getPersonProduct(){
-        return accountDaoImpl.select();
+    public List<PersonProduct> getPersonProduct(String cstno){
+        return accountDaoImpl.select(cstno);
     }
 }
