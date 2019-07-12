@@ -11,6 +11,7 @@ public class ForSaleProduct {
     private Date INVALIDDATE;//失效日期
     private Boolean ISCANTRADE;//是否可以交易（1 true 0 false）
 
+
     public String getFSFLWNO() {
         return FSFLWNO;
     }

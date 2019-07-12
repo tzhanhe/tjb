@@ -1,12 +1,14 @@
 package com.xztqd.tjb.po;
 
+import java.util.Date;
+
 public class PersonProduct {
     private String ppflwno;
     private String cstno;
     private String prono;
     private long buyamt;
-    private String buydate;
-    private String enddate;
+    private Date buydate;
+    private Date enddate;
     private int prostate;
 
     public String getPpflwno() {
@@ -41,19 +43,19 @@ public class PersonProduct {
         this.buyamt = buyamt;
     }
 
-    public String getBuydate() {
+    public Date getBuydate() {
         return buydate;
     }
 
-    public void setBuydate(String buydate) {
+    public void setBuydate(Date buydate) {
         this.buydate = buydate;
     }
 
-    public String getEnddate() {
+    public Date getEnddate() {
         return enddate;
     }
 
-    public void setEnddate(String enddate) {
+    public void setEnddate(Date enddate) {
         this.enddate = enddate;
     }
 
@@ -63,5 +65,29 @@ public class PersonProduct {
 
     public void setProstate(int prostate) {
         this.prostate = prostate;
+    }
+
+    public PersonProduct() {}
+
+    public PersonProduct(String ppflwno, String cstno, String prono, long buyamt, Date buydate, Date enddate, int prostate) {
+        this.ppflwno = ppflwno;
+        this.cstno = cstno;
+        this.prono = prono;
+        this.buyamt = buyamt;
+        this.buydate = buydate;
+        this.enddate = enddate;
+        this.prostate = prostate;
+    }
+
+    @Override
+    public String toString() {
+        return "PersonProduct {" +
+                "ppflwno: '" + ppflwno + "', " +
+                "cstno: '"+ cstno + "', "+
+                "prono: '" + prono + "', " +
+                "buyamt: " + buyamt + ", " +
+                "buydate: '" + buydate + "', " +
+                "enddate: '" + enddate + "', " +
+                "prostate: " + prostate + "}";
     }
 }

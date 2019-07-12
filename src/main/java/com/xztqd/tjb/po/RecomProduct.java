@@ -1,13 +1,15 @@
 package com.xztqd.tjb.po;
 
+import java.util.Date;
+
 public class RecomProduct {
     private String prono;
     private String proname;
     private String prodesc;
     private String prorate;
     private long saleamt;
-    private String invaliddate;
-    private String expiredate;
+    private Date invaliddate;
+    private Date expiredate;
     private String fsflwno;
 
     public String getProno() {
@@ -50,19 +52,19 @@ public class RecomProduct {
         this.saleamt = saleamt;
     }
 
-    public String getInvaliddate() {
+    public Date getInvaliddate() {
         return invaliddate;
     }
 
-    public void setInvaliddate(String invaliddate) {
+    public void setInvaliddate(Date invaliddate) {
         this.invaliddate = invaliddate;
     }
 
-    public String getExpiredate() {
+    public Date getExpiredate() {
         return expiredate;
     }
 
-    public void setExpiredate(String expiredate) {
+    public void setExpiredate(Date expiredate) {
         this.expiredate = expiredate;
     }
 
@@ -72,5 +74,33 @@ public class RecomProduct {
 
     public void setFsflwno(String fsflwno) {
         this.fsflwno = fsflwno;
+    }
+
+    public RecomProduct(){
+
+    }
+    public RecomProduct(String prono, String proname, String prodesc, String prorate, long saleamt, Date invaliddate, Date expiredate, String fsflwno) {
+        this.prono = prono;
+        this.proname = proname;
+        this.prodesc = prodesc;
+        this.prorate = prorate;
+        this.saleamt = saleamt;
+        this.invaliddate = invaliddate;
+        this.expiredate = expiredate;
+        this.fsflwno = fsflwno;
+    }
+
+    @Override
+    public String toString() {
+        return "RecomProduct {" +
+                "prono: '" + prono + "', " +
+              "prono: '"+ prono + "', "+
+             "proname: '" + proname + "', " +
+             "prodesc: '" + prodesc + "', " +
+             "prorate: '" + prorate + "', " +
+            "saleamt: " + saleamt + ", " +
+             "invaliddate: '" + invaliddate + "', " +
+             "expiredate: '" + expiredate + "', " +
+             "fsflwno: '"+ fsflwno + "'}";
     }
 }
