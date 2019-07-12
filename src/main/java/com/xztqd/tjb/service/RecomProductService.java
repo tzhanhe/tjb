@@ -3,7 +3,6 @@ package com.xztqd.tjb.service;
 import com.xztqd.tjb.bean.RecomProduct;
 import com.xztqd.tjb.dao.RecomProductDaoImpl;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
