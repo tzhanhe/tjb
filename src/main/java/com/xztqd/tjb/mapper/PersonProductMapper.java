@@ -11,6 +11,8 @@ import java.util.List;
 @Mapper
 @Repository
 public interface PersonProductMapper {
+
+    //selectallpersonproduct
     @Select("select * from PersonProduct where CSTNO = #{cstno}")
     public List<PersonProduct> queryPersonProduct(String cstno);
 }
